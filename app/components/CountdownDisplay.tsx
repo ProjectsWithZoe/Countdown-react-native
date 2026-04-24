@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import { TimeLeft } from "../utils/useCountdown";
 
 interface CountdownDisplayProps {
@@ -52,9 +52,12 @@ export const CountdownDisplay: React.FC<CountdownDisplayProps> = ({
   );
 };
 
-const TimeUnit: React.FC<{ value: number; unit: string }> = ({ value, unit }) => (
+const TimeUnit: React.FC<{ value: number; unit: string }> = ({
+  value,
+  unit,
+}) => (
   <View style={styles.unitWrap}>
-    <Text style={styles.number}>{String(value).padStart(2, "0")}</Text>
+    <Text style={styles.number}>{String(value).padStart(0, "0")}</Text>
     <Text style={styles.unitLabel}>{unit}</Text>
   </View>
 );
@@ -68,12 +71,12 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "300",
     color: "#F5F5F5",
-    letterSpacing: -0.5,
+    letterSpacing: 0.5,
     textAlign: "center",
     marginBottom: 8,
   },
   label: {
-    fontSize: 11,
+    fontSize: 16,
     letterSpacing: 3,
     textTransform: "uppercase",
     color: "#333",
@@ -82,31 +85,31 @@ const styles = StyleSheet.create({
   timerRow: {
     flexDirection: "row",
     alignItems: "flex-start",
-    gap: 6,
+    gap: -10,
   },
   unitWrap: {
     alignItems: "center",
-    width: 64,
+    width: 90,
   },
   number: {
-    fontSize: 52,
+    fontSize: 40,
     fontWeight: "200",
     color: "#F5F5F5",
-    letterSpacing: -1,
-    lineHeight: 58,
+    letterSpacing: 0,
+    lineHeight: 48,
   },
   unitLabel: {
-    fontSize: 10,
+    fontSize: 12,
     color: "#444",
-    letterSpacing: 2,
+    letterSpacing: 0,
     textTransform: "uppercase",
     marginTop: 4,
   },
   sep: {
-    fontSize: 40,
+    fontSize: 0,
     fontWeight: "200",
     color: "#2A2A2A",
-    lineHeight: 58,
+    lineHeight: 48,
   },
   expiredText: {
     fontSize: 28,
