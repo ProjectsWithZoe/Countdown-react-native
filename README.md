@@ -16,6 +16,15 @@ A minimal React Native app for counting down to a single event.
 - `@react-native-async-storage/async-storage` for persistence
 - `@react-native-community/datetimepicker` for date/time input
 
+## Screenshots
+
+<p float="left">
+  <img src="assets/images/Simulator Screenshot - iPhone 17 - 2026-04-24 at 17.56.01.png" width="22%" />
+  <img src="assets/images/Simulator Screenshot - iPhone 17 - 2026-04-24 at 17.56.16.png" width="22%" />
+  <img src="assets/images/Simulator Screenshot - iPhone 17 - 2026-04-24 at 17.56.39.png" width="22%" />
+  <img src="assets/images/Simulator Screenshot - iPhone 17 - 2026-04-24 at 18.15.55.png" width="22%" />
+</p>
+
 ## Getting Started
 
 ```bash
